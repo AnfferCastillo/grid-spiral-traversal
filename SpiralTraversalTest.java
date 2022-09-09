@@ -155,11 +155,12 @@ class SpiralTraversal {
             var rowInBound = row + step[0] < arr.length && row + step[0] >= 0;
             var colInBound = col + step[1] < arr[0].length && col + step[1] >= 0;
             if(!rowInBound || !colInBound || visited[row + step[0]][col + step[1]]) {
-                // to loop directions
+                //get the right direction
                 direction = (direction + 1) % 4;
                 step = directions[direction];
             }
 
+            //moving a step in the grid
             row += step[0];
             col += step[1];
 
